@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F7F5FF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- App Name -->
+
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Campus Skill Swap"
+            android:textColor="#6750A4"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Tagline -->
+
+        <TextView
+            android:id="@+id/tvTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Learn • Teach • Connect"
+            android:textColor="#777777"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Greeting -->
+
+        <TextView
+            android:id="@+id/tvHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Hello, Student! 👋"
+            android:textColor="#222222"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvTagline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Question -->
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="What would you like to do today?"
+            android:textColor="#666666"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/tvHello"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Explore Skills -->
+
+        <Button
+            android:id="@+id/btnExplore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="🔍  Explore Skills"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- My Requests -->
+
+        <Button
+            android:id="@+id/btnRequests"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="📩  My Swap Requests"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/btnExplore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- My Profile -->
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="👤  My Profile"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/btnRequests"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Popular Skills -->
+
+        <TextView
+            android:id="@+id/tvPopularSkills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Popular Skills ⭐"
+            android:textColor="#222222"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/btnProfile"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Skills -->
+
+        <TextView
+            android:id="@+id/tvSkills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="8dp"
+            android:text="💻  Android Development&#10;&#10;🌐  Web Development&#10;&#10;🐍  Python&#10;&#10;🎨  Graphic Design&#10;&#10;📸  Photography&#10;&#10;🎸  Guitar"
+            android:textColor="#444444"
+            android:textSize="17sp"
+            app:layout_constraintTop_toBottomOf="@id/tvPopularSkills"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

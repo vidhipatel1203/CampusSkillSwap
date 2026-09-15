@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.CampusSkillSwap" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.CampusSkillSwap" parent="Base.Theme.CampusSkillSwap">
+        <item name="android:windowBackground">#6750A4</item>
+    </style>
+
+</resources>
