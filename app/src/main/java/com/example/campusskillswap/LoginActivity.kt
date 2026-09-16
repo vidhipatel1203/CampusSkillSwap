@@ -27,12 +27,35 @@ class LoginActivity : AppCompatActivity() {
         val tvRegister =
             findViewById<TextView>(R.id.tvRegister)
 
+        val tvForgotPassword =
+            findViewById<TextView>(R.id.tvForgotPassword)
+
+
+        // Register
         tvRegister.setOnClickListener {
+
             startActivity(
-                Intent(this, RegisterActivity::class.java)
+                Intent(
+                    this,
+                    RegisterActivity::class.java
+                )
             )
         }
 
+
+        // Forgot Password
+        tvForgotPassword.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    this,
+                    ForgotPasswordActivity::class.java
+                )
+            )
+        }
+
+
+        // Login
         btnLogin.setOnClickListener {
 
             val enteredEmail =
@@ -41,9 +64,13 @@ class LoginActivity : AppCompatActivity() {
             val enteredPassword =
                 password.text.toString()
 
-            if (enteredEmail.isEmpty() ||
+
+            // Check empty fields
+            if (
+                enteredEmail.isEmpty() ||
                 enteredPassword.isEmpty()
             ) {
+
                 Toast.makeText(
                     this,
                     "Please enter email and password",
@@ -53,12 +80,16 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+
+            // Get registered users
             val users =
                 UserStorage.getUsers(this)
 
             var loginSuccessful = false
             var loggedInName = ""
 
+
+            // Check login details
             for (i in 0 until users.length()) {
 
                 val user =
@@ -82,6 +113,8 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
+
+            // Login successful
             if (loginSuccessful) {
 
                 getSharedPreferences(
@@ -99,11 +132,13 @@ class LoginActivity : AppCompatActivity() {
                     )
                     .apply()
 
+
                 Toast.makeText(
                     this,
                     "Login successful 👋",
                     Toast.LENGTH_SHORT
                 ).show()
+
 
                 startActivity(
                     Intent(
